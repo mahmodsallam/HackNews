@@ -8,7 +8,7 @@ import com.mahmoud.mostafa.hacknews.R;
 import com.mahmoud.mostafa.hacknews.base.BaseActivity;
 import com.mahmoud.mostafa.hacknews.databinding.ActivityDetailBinding;
 
-public class DetailActivity extends BaseActivity implements DetailMvpView {
+public class    DetailActivity extends BaseActivity implements DetailMvpView {
 
     private String id;
     private DetailsPresenter mPresenter;
@@ -20,6 +20,7 @@ public class DetailActivity extends BaseActivity implements DetailMvpView {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_detail);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         id = getIntent().getStringExtra("id");
         mPresenter = new DetailsPresenter(this);
         mPresenter.getStoryDetails(id);
